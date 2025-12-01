@@ -3,11 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://asaduzzaman-anik.github.io/Buuno",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",
@@ -29,10 +32,5 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.17",
     "vite": "^7.2.4"
-  },
-  "homepage": "https://asaduzzaman-anik.github.io/Buuno",
-  "script": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
   }
 }
