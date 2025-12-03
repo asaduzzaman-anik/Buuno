@@ -4,10 +4,14 @@ import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
 import PoloShirts from "./pages/PoloShirts";
 import Tshirt from "./pages/Tshirt";
+import SocialLinks from "./components/SocialLinks";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
     <Router>
+      <SocialLinks />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/polo-shirt" element={<PoloShirts />} />
