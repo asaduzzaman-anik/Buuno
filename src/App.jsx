@@ -1,18 +1,21 @@
-import { BrowserRouter } from "react-router-dom";
-import Header from "./components/Header";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-function App() {
+import ProductDetails from "./pages/ProductDetails";
+import PoloShirts from "./pages/PoloShirts";
+import Tshirt from "./pages/Tshirt";
+
+const App = () => {
   return (
-    <div>
-      {/* Header goes here */}
-      <Header />
-
-      {/* Homepage goes here */}
-      <Home />
-
-      {/* Footer goes here */}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/polo-shirt" element={<PoloShirts />} />
+        <Route path="/t-shirt" element={<Tshirt />} />
+        <Route path="/product-details" element={<ProductDetails />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

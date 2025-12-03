@@ -1,19 +1,17 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import Categories from "../components/Categories";
+import ProductList from "./ProductList";
+import { products } from "../data/products";
+import ProductCard from "../components/ProductCard";
 
 const Home = () => {
   return (
-    <BrowserRouter>
-      {/* Hero section goes here */}
-
-      {/* Category section goes here */}
-      <Categories />
-
-      {/* New Arrivals section goes here */}
-
-      {/* Combo offer section goes here */}
-    </BrowserRouter>
+    <div>
+      <ProductList
+        heading="new arrivals"
+        subheading="Here's some of our most popular products people are in love with"
+        products={products}
+      />
+    </div>
   );
 };
 
