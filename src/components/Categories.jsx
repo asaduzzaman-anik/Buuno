@@ -14,7 +14,7 @@ const Categories = () => {
       {/* Section Content - Category with image and links */}
       <div className="flex flex-nowrap gap-8 md:gap-10 items-center justify-evenly px-5 py-10 overflow-x-scroll">
         {categories.map((cat) => (
-          <Link key={cat.id} to={`/${cat.name}`}>
+          <Link key={cat.id} to={`/${cat.route_parameter}`}>
             <div className="flex flex-col gap-2 items-center">
               <div className="h-40 w-40 sm:h-50 sm:w-50 rounded-full bg-gray-300 overflow-hidden">
                 <img src={cat.image} alt="" className="w-full h-full p-10" />

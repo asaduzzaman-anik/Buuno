@@ -2,7 +2,7 @@ import React from "react";
 import { products } from "../data/products";
 import ProductList from "./ProductList";
 
-const PoloShirts = () => {
+const MensPolo = () => {
   const poloShirts = products.filter(
     (product) => product.category === "Mens' Polo Shirt"
   );
@@ -17,4 +17,4 @@ const PoloShirts = () => {
   );
 };
 
-export default PoloShirts;
+export default MensPolo;

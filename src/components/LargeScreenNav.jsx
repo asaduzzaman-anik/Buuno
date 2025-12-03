@@ -7,7 +7,7 @@ const LargeScreenNav = () => {
       <ul className="w-[80%] mx-auto flex justify-between items-center gap-5 text-white text-lg">
         {categories.map((cat) => (
           <Link
-            to={"/"}
+            to={cat.route_parameter}
             key={cat.id}
             className="flex justify-start items-center"
           >
