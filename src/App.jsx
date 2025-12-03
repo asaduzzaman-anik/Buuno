@@ -11,6 +11,7 @@ import NewArrivals from "./pages/NewArrivals";
 import MensCollection from "./pages/MensCollection";
 import MensCombo from "./pages/MensCombo";
 import HotOffers from "./pages/HotOffers";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/hot-offers" element={<HotOffers />} />
         <Route path="/product/:code" element={<ProductDetails />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
