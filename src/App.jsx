@@ -18,15 +18,15 @@ const App = () => {
       <SocialLinks />
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />  
-        <Route path="/new-arrivals" element={<NewArrivals/>} />      
-        <Route path="/mens-collection" element={<MensCollection/>} />      
+        <Route path="/" element={<Home />} />
+        <Route path="/new-arrivals" element={<NewArrivals />} />
+        <Route path="/mens-collection" element={<MensCollection />} />
         <Route path="/mens-tshirt" element={<MensTshirt />} />
         <Route path="/mens-polo" element={<MensPolo />} />
         <Route path="/mens-panjabi" element={<MensPanjabi />} />
         <Route path="/mens-combo" element={<MensCombo />} />
         <Route path="/hot-offers" element={<HotOffers />} />
-        <Route path="/product-details" element={<ProductDetails />} />
+        <Route path="/product/:code" element={<ProductDetails />} />
       </Routes>
     </Router>
   );
