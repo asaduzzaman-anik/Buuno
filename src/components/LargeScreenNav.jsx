@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const LargeScreenNav = () => {
   return (
     <div className="hidden sm:flex justify-between items-center h-20 bg-red-700 w-full">
-      <ul className="w-[80%] mx-auto flex justify-between items-center gap-5 text-white text-lg">
+      <ul className="w-[80%] mx-auto flex justify-between items-center gap-2 text-white">
         {categories.map((cat) => (
           <Link
             to={cat.route_parameter}
@@ -12,7 +12,7 @@ const LargeScreenNav = () => {
             className="flex justify-start items-center"
           >
             <img src={cat.icon} alt="" className="w-6 h-6 mr-2" />
-            {cat.name}
+            <p className="text-lg">{cat.name}</p>
           </Link>
         ))}
       </ul>

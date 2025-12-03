@@ -3,7 +3,7 @@ import ProductCard from "../components/ProductCard";
 
 const ProductList = ({ heading, subheading, products }) => {
   return (
-    <div className="p-10">
+    <div className="p-2 md:p-10">
       {/* prodcut section info */}
       <div className="pb-5">
         <h2 className="text-2 font-bold uppercase">{heading}</h2>

@@ -1,6 +1,6 @@
-import React from 'react'
-import { products } from '../data/products';
-import ProductList from './ProductList';
+import React from "react";
+import { products } from "../data/products";
+import ProductList from "./ProductList";
 
 const MensCombo = () => {
   const comboItems = products.filter(
@@ -15,6 +15,6 @@ const MensCombo = () => {
       />
     </div>
   );
-}
+};
 
-export default MensCombo
+export default MensCombo;

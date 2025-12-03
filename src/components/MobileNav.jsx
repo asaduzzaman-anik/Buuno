@@ -5,7 +5,7 @@ import { categories } from "../data/categories";
 const MobileNav = () => {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="sticky w-full sm:w-[80%] sm:mx-auto left-0 right-0 flex justify-between items-center bg-white shadow sm:shadow-none h-14 sm:h-24 p-2">
+    <nav className="sticky w-full sm:w-[80%] sm:mx-auto left-0 right-0 flex justify-between items-center bg-white shadow sm:shadow-none h-14 sm:h-20 p-2">
       {/* <!-- menu bar button + search icon for mobile screen --> */}
       <div className="flex justify-between items-center gap-3 sm:hidden">
         <button

@@ -1,9 +1,8 @@
-import React from 'react'
-import { products } from '../data/products'
-import ProductList from './ProductList'
+import React from "react";
+import { products } from "../data/products";
+import ProductList from "./ProductList";
 
 const NewArrivals = () => {
-
   return (
     <div>
       <ProductList
@@ -12,7 +11,7 @@ const NewArrivals = () => {
         products={products}
       />
     </div>
-  )
-}
+  );
+};
 
-export default NewArrivals
+export default NewArrivals;
