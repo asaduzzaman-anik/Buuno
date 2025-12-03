@@ -75,7 +75,7 @@ const MobileNav = () => {
           <ul className="flex flex-col gap-7 py-5 px-2 h-screen w-fit text-white">
             {categories.map((cat) => (
               <Link
-                to={"/"}
+                to={cat.route_parameter}
                 key={cat.id}
                 className="flex justify-start items-center"
               >
