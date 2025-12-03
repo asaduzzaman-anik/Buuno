@@ -6,7 +6,7 @@ const ProductList = ({ heading, subheading, products }) => {
     <div className="p-2 md:p-10">
       {/* prodcut section info */}
       <div className="pb-5">
-        <h2 className="text-2 font-bold uppercase">{heading}</h2>
+        <h2 className="text-2xl font-bold uppercase">{heading}</h2>
         <p>{subheading}</p>
       </div>
       {/* product section contents */}

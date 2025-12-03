@@ -3,12 +3,15 @@ import { categories } from "../data/categories";
 import { Link } from "react-router-dom";
 
 const Categories = () => {
-  const newCategory = categories.filter((category)=> (category.name !== "New Arrivals" && category.name !== "Hot Offers") )
+  const newCategory = categories.filter(
+    (category) =>
+      category.name !== "New Arrivals" && category.name !== "Hot Offers"
+  );
   return (
     <section id="category" className="px-5 md:px-15 py-5 bg-white">
       {/* Section Heading */}
       <div>
-        <h2 className="text-2xl uppercase font-medium">Shop the Collections</h2>
+        <h2 className="text-2xl uppercase font-bold">Shop the Collections</h2>
         <p>Shop the latest products from the most popular collections</p>
       </div>
 
