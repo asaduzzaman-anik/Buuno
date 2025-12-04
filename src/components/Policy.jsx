@@ -5,7 +5,7 @@ const Policy = () => {
     <div className="flex flex-col sm:flex-row justify-evenly items-center bg-red-800 p-5 gap-8 mx-auto">
       <div className="flex flex-col justify-center items-center gap-5">
         <img
-          src="./src/assets/images/policy/return.png"
+          src="/src/assets/images/policy/return.png"
           alt=""
           className="h-20 w-20"
         />
@@ -16,7 +16,7 @@ const Policy = () => {
       </div>
       <div className="flex flex-col justify-center items-center gap-5">
         <img
-          src="./src/assets/images/policy/payment.png"
+          src="/src/assets/images/policy/payment.png"
           alt=""
           className="h-20 w-20"
         />
@@ -27,7 +27,7 @@ const Policy = () => {
       </div>
       <div className="flex flex-col justify-center items-center gap-5">
         <img
-          src="./src/assets/images/policy/customer-support.png"
+          src="/src/assets/images/policy/customer-support.png"
           alt=""
           className="h-20 w-20"
         />
