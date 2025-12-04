@@ -3,7 +3,7 @@ import Categories from "../components/Categories";
 import NewArrivals from "./NewArrivals";
 import MensCombo from "./MensCombo";
 import Hero from "../components/Hero";
-import Policy from "../components/Policy.Jsx";
+import Policy from "../components/Policy";
 
 const Home = () => {
   return (
