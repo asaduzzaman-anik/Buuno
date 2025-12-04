@@ -54,11 +54,11 @@ const Footer = () => {
         <p>© 2024 Buuno All rights reserved || Designed & Developed by Anik</p>
         <div className="flex items-center gap-2">
           <p>Pay with</p>
-          <img src="/img/visa.png" alt="" className="w-10 h-7" />
-          <img src="/img/mastercard.png" alt="" className="w-10 h-7" />
-          <img src="/img/paypal.png" alt="" className="w-10 h-7" />
-          <img src="/img/apple pay.png" alt="" className="w-10 h-7" />
-          <img src="/img/gpay.png" alt="" className="w-10 h-7" />
+          <img src="/img/payment/visa.png" alt="" className="w-10 h-7" />
+          <img src="/img/payment/mastercard.png" alt="" className="w-10 h-7" />
+          <img src="/img/payment/paypal.png" alt="" className="w-10 h-7" />
+          <img src="/img/payment/apple pay.png" alt="" className="w-10 h-7" />
+          <img src="/img/payment/gpay.png" alt="" className="w-10 h-7" />
         </div>
       </div>
     </div>
