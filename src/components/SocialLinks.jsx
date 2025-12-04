@@ -16,20 +16,12 @@ const SocialLinks = () => {
         {" "}
         {/* <!-- contact info goes here  --> */}
         <div>
-          <img
-            src="src/assets/images/icons/phone.png"
-            alt=""
-            className="h-4 inline"
-          />
+          <img src="/img/icons/phone.png" alt="" className="h-4 inline" />
           <span>01580307479</span>
         </div>
         <span className="px-4">|</span>
         <a href="#">
-          <img
-            src="src/assets/images/icons/email.png"
-            alt=""
-            className="h-6 inline"
-          />
+          <img src="/img/icons/email.png" alt="" className="h-6 inline" />
           <span>buuno.co@gmail.com</span>
         </a>
       </div>

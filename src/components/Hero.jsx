@@ -4,7 +4,7 @@ const Hero = () => {
       {/* <!-- image --> */}
       <div class="h-60 w-60 sm:h-100 sm:w-100">
         <img
-          src="src/assets/images/Family_Photos-removebg-preview.png"
+          src="/img/Family_Photos-removebg-preview.png"
           alt=""
           class="h-full w-auto"
         />

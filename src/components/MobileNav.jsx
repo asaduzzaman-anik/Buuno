@@ -13,24 +13,16 @@ const MobileNav = () => {
           onClick={() => setOpen(!open)}
           className="cursor-pointer"
         >
-          <img
-            src="src/assets/images/icons/menu.png"
-            alt=""
-            className="h-4 w-4"
-          />
+          <img src="/img/icons/menu.png" alt="" className="h-4 w-4" />
         </button>
         <button type="button" className="cursor-pointer">
-          <img
-            src="src/assets/images/icons/search.png"
-            alt=""
-            className="h-4 w-4"
-          />
+          <img src="/img/icons/search.png" alt="" className="h-4 w-4" />
         </button>
       </div>
       {/* <!-- brand logo --> */}
       <Link to="/" className="cursor-pointer">
         <img
-          src="src/assets/images/logo.png"
+          src="/img/images/logo.png"
           alt=""
           className="h-full sm:h-18 sm:w-auto w-20"
         />
@@ -49,7 +41,7 @@ const MobileNav = () => {
             className="bg-red-700 absolute top-0 right-0 rounded-tr-lg rounded-br-lg h-12 w-12 cursor-pointer"
           >
             <img
-              src="src/assets/images/icons/search-white.png"
+              src="/img/icons/search-white.png"
               alt=""
               className="h-10 w-10 p-2"
             />
@@ -60,7 +52,7 @@ const MobileNav = () => {
       <div className="flex justify-between items-center gap-3">
         <button type="button" className="cursor-pointer">
           <img
-            src="src/assets/images/icons/cart.png"
+            src="/img/icons/cart.png"
             alt=""
             className="h-4 w-4 sm:h-6 sm:w-6"
           />
