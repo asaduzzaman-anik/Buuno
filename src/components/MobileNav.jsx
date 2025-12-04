@@ -22,7 +22,7 @@ const MobileNav = () => {
       {/* <!-- brand logo --> */}
       <Link to="/" className="cursor-pointer">
         <img
-          src="/img/images/logo.png"
+          src="/img/logo.png"
           alt=""
           className="h-full sm:h-18 sm:w-auto w-20"
         />
