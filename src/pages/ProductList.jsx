@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 
 const ProductList = ({ heading, subheading, products }) => {
@@ -10,7 +10,7 @@ const ProductList = ({ heading, subheading, products }) => {
         <p>{subheading}</p>
       </div>
       {/* product section contents */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-5 gap-5">
         {products.map((product) => (
           <ProductCard key={product.code} product={product} />
         ))}

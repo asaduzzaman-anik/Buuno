@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { categories } from "../data/categories";
-const MobileNav = () => {
+const MobileNav = ({ openCart }) => {
   const [open, setOpen] = useState(false);
   return (
     <nav className="w-full sm:px-[10%] sm:mx-auto left-0 right-0 flex justify-between items-center bg-white shadow sm:shadow-none h-14 sm:h-20 p-2">
@@ -50,7 +50,7 @@ const MobileNav = () => {
       </div>
       {/* <!-- cart icon + sign in option --> */}
       <div className="flex justify-between items-center gap-3">
-        <button type="button" className="cursor-pointer">
+        <button onClick={openCart} className="cursor-pointer">
           <img
             src="/img/icons/cart.png"
             alt=""
