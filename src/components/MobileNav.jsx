@@ -6,7 +6,7 @@ import { CartContext } from "../context/CartContext";
 
 const MobileNav = () => {
   const [open, setOpen] = useState(false);
-  const { openCart } = useContext(CartContext);
+  const { cart, openCart } = useContext(CartContext);
 
   return (
     <nav className="w-full sm:px-[10%] sm:mx-auto left-0 right-0 flex justify-between items-center bg-white shadow sm:shadow-none h-14 sm:h-20 p-2">
@@ -54,13 +54,18 @@ const MobileNav = () => {
       </div>
       {/* <!-- cart icon + sign in option --> */}
       <div className="flex justify-between items-center gap-3">
-        <button onClick={openCart} className="cursor-pointer">
-          <img
-            src="/img/icons/cart.png"
-            alt=""
-            className="h-4 w-4 sm:h-6 sm:w-6"
-          />
-        </button>
+        <div className="relative h-auto">
+          <button onClick={openCart} className="cursor-pointer">
+            <img
+              src="/img/icons/cart.png"
+              alt=""
+              className="h-4 w-4 sm:h-6 sm:w-6"
+            />
+          </button>
+          {cart.length > 0 &&
+            <p className="absolute -top-3 -right-2 text-xs bg-red-900 text-white rounded-full w-5 h-5 text-center">{cart.length}</p>
+          }
+        </div>
         <a href="#" className="sm:text-xl">
           Sign in
         </a>
