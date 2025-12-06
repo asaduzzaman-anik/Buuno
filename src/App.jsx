@@ -18,7 +18,7 @@ import { Toaster } from "react-hot-toast";
 const App = () => {
   return (
     <>
-    <Toaster position="top-right"/>
+      <Toaster position="bottom-center"/>
       <SocialLinks />
       <Navbar />
       <Routes>
