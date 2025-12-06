@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
         className={`bg-white shadow-md rounded p-4 flex items-center gap-3 
       ${t.visible ? "animate-enter" : "animate-leave"}`}
       >
-        <span>This is a custom toast!</span>
+        <span>Product added to cart!</span>
 
         <button
           onClick={() => {
@@ -39,7 +39,10 @@ const ProductCard = ({ product }) => {
         <p className="text-red-900 font-bold text-2xl">৳{product.price}</p>
         <button
           className="bg-red-900 rounded-lg p-1 text-white cursor-pointer"
-          onClick={() => console.log("Add to cart is clicked")}
+          onClick={() => {
+            addToCart(product);
+            showToastNotification();
+          }}
         >
           Add to Cart
         </button>
