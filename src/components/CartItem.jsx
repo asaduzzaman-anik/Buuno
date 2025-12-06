@@ -15,20 +15,20 @@ export default function CartItem({ item }) {
       <div className="flex items-center gap-2">
         <button
           className="px-3 bg-gray-300 rounded"
-          onClick={() => decrement(item.id)}
+          onClick={() => decrement(item.code)}
         >
           -
         </button>
         <button
           className="px-3 bg-gray-300 rounded"
-          onClick={() => increment(item.id)}
+          onClick={() => increment(item.code)}
         >
           +
         </button>
 
         <button
           className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
-          onClick={() => removeFromCart(item.id)}
+          onClick={() => removeFromCart(item.code)}
         >
           Remove
         </button>

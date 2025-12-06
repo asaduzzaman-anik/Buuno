@@ -1,9 +1,13 @@
 // This Navbar will be visible on both mobile and large screen
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { categories } from "../data/categories";
-const MobileNav = ({ openCart }) => {
+import { CartContext } from "../context/CartContext";
+
+const MobileNav = () => {
   const [open, setOpen] = useState(false);
+  const { openCart } = useContext(CartContext);
+
   return (
     <nav className="w-full sm:px-[10%] sm:mx-auto left-0 right-0 flex justify-between items-center bg-white shadow sm:shadow-none h-14 sm:h-20 p-2">
       {/* <!-- menu bar button + search icon for mobile screen --> */}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
@@ -16,7 +16,6 @@ import CartProvider from "./context/CartContext";
 import Cart from "./components/Cart";
 
 const App = () => {
-  const [cartOpen, setCartOpen] = useState(false);
   return (
     <CartProvider>
       <Router>
@@ -35,7 +34,8 @@ const App = () => {
         </Routes>
         <Footer />
       </Router>
-      {cartOpen && <Cart close={() => setCartOpen(false)} />}
+
+      <Cart />
     </CartProvider>
   );
 };

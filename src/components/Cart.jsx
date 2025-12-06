@@ -2,8 +2,10 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import CartItem from "./CartItem";
 
-export default function Cart({ close }) {
-  const { cart } = useContext(CartContext);
+export default function Cart() {
+  const { cart, close, cartOpened } = useContext(CartContext);
+
+  if (!cartOpened) return null;
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
