@@ -21,7 +21,6 @@ const ProductCard = ({ product }) => {
           className="bg-red-900 rounded-lg p-1 text-white cursor-pointer"
           onClick={() => {
             addToCart(product);
-            openCart();
           }}
         >
           Add to Cart
