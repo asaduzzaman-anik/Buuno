@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
 import MensTshirt from "./pages/MensTshirt";
@@ -12,31 +11,31 @@ import MensCollection from "./pages/MensCollection";
 import MensCombo from "./pages/MensCombo";
 import HotOffers from "./pages/HotOffers";
 import Footer from "./components/Footer";
-import CartProvider from "./context/CartContext";
 import Cart from "./components/Cart";
+import Checkout from "./pages/Checkout";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
-  const [cartOpen, setCartOpen] = useState(false);
   return (
-    <CartProvider>
-      <Router>
-        <SocialLinks />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/new-arrivals" element={<NewArrivals />} />
-          <Route path="/mens-collection" element={<MensCollection />} />
-          <Route path="/mens-tshirt" element={<MensTshirt />} />
-          <Route path="/mens-polo" element={<MensPolo />} />
-          <Route path="/mens-panjabi" element={<MensPanjabi />} />
-          <Route path="/mens-combo" element={<MensCombo />} />
-          <Route path="/hot-offers" element={<HotOffers />} />
-          <Route path="/product/:code" element={<ProductDetails />} />
-        </Routes>
-        <Footer />
-      </Router>
-      {cartOpen && <Cart close={() => setCartOpen(false)} />}
-    </CartProvider>
+    <>
+      <Toaster position="bottom-center"/>
+      <SocialLinks />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/new-arrivals" element={<NewArrivals />} />
+        <Route path="/mens-collection" element={<MensCollection />} />
+        <Route path="/mens-tshirt" element={<MensTshirt />} />
+        <Route path="/mens-polo" element={<MensPolo />} />
+        <Route path="/mens-panjabi" element={<MensPanjabi />} />
+        <Route path="/mens-combo" element={<MensCombo />} />
+        <Route path="/hot-offers" element={<HotOffers />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/product/:code" element={<ProductDetails />} />
+      </Routes>
+      <Footer />
+      <Cart />
+    </>
   );
 };
 

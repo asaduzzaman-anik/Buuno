@@ -6,6 +6,7 @@ const HotOffers = () => {
   const offerItems = products.filter(
     (product) => product.category === "Hot Offers"
   );
+
   return (
     <div>
       <ProductList
