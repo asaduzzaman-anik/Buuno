@@ -13,10 +13,12 @@ import HotOffers from "./pages/HotOffers";
 import Footer from "./components/Footer";
 import Cart from "./components/Cart";
 import Checkout from "./pages/Checkout";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <>
+    <Toaster position="top-right"/>
       <SocialLinks />
       <Navbar />
       <Routes>
