@@ -7,7 +7,7 @@ export default function CartItem({ item }) {
   const { increment, decrement, removeFromCart } = useContext(CartContext);
 
   return (
-    <div className="w-full h-20 flex justify-between items-center mb-1 gap-3 shadow-sm">
+    <div className="w-full h-20 flex justify-between items-center mb-1 gap-3 shadow">
       {/* image */}
       <div className="h-15 w-15 rounded overflow-hidden">
         <img src={item.image} alt="product image" />

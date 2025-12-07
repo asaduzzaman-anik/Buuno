@@ -23,7 +23,7 @@ export default function Cart() {
           </button>
         </div>
         {/* items */}
-        <div className="flex flex-col h-[80vh] overflow-y-scroll">
+        <div className="flex flex-col gap-3 h-[80vh] overflow-y-scroll">
           {cart.length === 0 && <p>No items yet...</p>}
 
           {cart.map((item) => (
