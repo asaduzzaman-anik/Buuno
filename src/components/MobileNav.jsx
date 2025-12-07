@@ -1,11 +1,22 @@
 // This Navbar will be visible on both mobile and large screen
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { categories } from "../data/categories";
+import { CartContext } from "../context/CartContext";
+import {
+  RiMenuFold2Line,
+  RiSearch2Line,
+  RiShoppingCart2Line,
+  RiUser3Line,
+  RiUserLine,
+} from "react-icons/ri";
+
 const MobileNav = () => {
   const [open, setOpen] = useState(false);
+  const { cart, openCart } = useContext(CartContext);
+
   return (
-    <nav className="sticky w-full sm:w-[80%] sm:mx-auto left-0 right-0 flex justify-between items-center bg-white shadow sm:shadow-none h-14 sm:h-20 p-2">
+    <nav className="w-full sm:px-[10%] sm:mx-auto left-0 right-0 flex justify-between items-center bg-white shadow sm:shadow-none h-14 sm:h-20 p-2">
       {/* <!-- menu bar button + search icon for mobile screen --> */}
       <div className="flex justify-between items-center gap-3 sm:hidden">
         <button
@@ -13,10 +24,10 @@ const MobileNav = () => {
           onClick={() => setOpen(!open)}
           className="cursor-pointer"
         >
-          <img src="/img/icons/menu.png" alt="" className="h-4 w-4" />
+          <RiMenuFold2Line size={25} />
         </button>
         <button type="button" className="cursor-pointer">
-          <img src="/img/icons/search.png" alt="" className="h-4 w-4" />
+          <RiSearch2Line size={25} />
         </button>
       </div>
       {/* <!-- brand logo --> */}
@@ -50,16 +61,19 @@ const MobileNav = () => {
       </div>
       {/* <!-- cart icon + sign in option --> */}
       <div className="flex justify-between items-center gap-3">
+        <div className="relative h-auto flex items-center">
+          <button onClick={openCart} className="cursor-pointer">
+            <RiShoppingCart2Line size={25} />
+          </button>
+          {cart.length > 0 && (
+            <p className="absolute -top-3 -right-2 text-xs bg-red-900 text-white rounded-full w-5 h-5 text-center">
+              {cart.length}
+            </p>
+          )}
+        </div>
         <button type="button" className="cursor-pointer">
-          <img
-            src="/img/icons/cart.png"
-            alt=""
-            className="h-4 w-4 sm:h-6 sm:w-6"
-          />
+          <RiUserLine size={25} />
         </button>
-        <a href="#" className="sm:text-xl">
-          Sign in
-        </a>
       </div>
       {/* MOBILE MENU */}
       {open && (

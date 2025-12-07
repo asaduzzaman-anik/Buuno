@@ -3,7 +3,7 @@ import { categories } from "../data/categories";
 import { Link } from "react-router-dom";
 const LargeScreenNav = () => {
   return (
-    <div className="hidden sm:flex justify-between items-center h-20 bg-red-700 w-full">
+    <div className="hidden sm:flex justify-between items-center h-20 bg-red-700 w-full font-poppins">
       <ul className="w-[80%] mx-auto flex justify-between items-center gap-2 text-white">
         {categories.map((cat) => (
           <Link
@@ -12,7 +12,7 @@ const LargeScreenNav = () => {
             className="flex justify-start items-center"
           >
             <img src={cat.icon} alt="" className="w-6 h-6 mr-2" />
-            <p className="text-lg">{cat.name}</p>
+            <p className="text-sm lg:text-lg">{cat.name}</p>
           </Link>
         ))}
       </ul>

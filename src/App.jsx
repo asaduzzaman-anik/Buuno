@@ -1,5 +1,4 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
 import MensTshirt from "./pages/MensTshirt";
@@ -12,10 +11,14 @@ import MensCollection from "./pages/MensCollection";
 import MensCombo from "./pages/MensCombo";
 import HotOffers from "./pages/HotOffers";
 import Footer from "./components/Footer";
+import Cart from "./components/Cart";
+import Checkout from "./pages/Checkout";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
-    <Router>
+    <>
+      <Toaster position="bottom-center"/>
       <SocialLinks />
       <Navbar />
       <Routes>
@@ -27,10 +30,12 @@ const App = () => {
         <Route path="/mens-panjabi" element={<MensPanjabi />} />
         <Route path="/mens-combo" element={<MensCombo />} />
         <Route path="/hot-offers" element={<HotOffers />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/product/:code" element={<ProductDetails />} />
       </Routes>
       <Footer />
-    </Router>
+      <Cart />
+    </>
   );
 };
 
