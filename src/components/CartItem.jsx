@@ -1,52 +1,53 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { RiDeleteBin5Fill } from "react-icons/ri";
-import { FaMinus, FaPlus } from "react-icons/fa";
+import { FiMinusCircle, FiPlusCircle } from "react-icons/fi";
 
 export default function CartItem({ item }) {
   const { increment, decrement, removeFromCart } = useContext(CartContext);
 
   return (
-    <div className="w-auto flex justify-between items-center mb-5 gap-3">
-      {/* image  */}
-      <div className="rounded border-gray-400 shadow shadow-gray-400 overflow-hidden">
-        <img src={item.image} alt="" className="h-20 w-20" />
+    <div className="w-full h-20 flex justify-between items-center mb-1 gap-3 shadow-sm">
+      {/* image */}
+      <div className="h-15 w-15 rounded overflow-hidden">
+        <img src={item.image} alt="product image" />
       </div>
-      {/* text */}
-      <div className="flex flex-col flex-1  gap-2">
-        {/* name and price */}
-        <div className="flex justify-between items-start">
-          <h3 className="text-sm font-semibold w-[80%] text-clip">
-            {item.name}
-          </h3>
-          <p className="font-bold">৳ {item.price}</p>
+      {/* info */}
+      <div className="w-60 flex flex-col justify-between text-sm">
+        <div>
+          <h2>{item.name}</h2>
         </div>
-        {/* buttons */}
-        <div className="flex justify-between items-center">
-          <div className="flex justify-between items-center gap-2">
+        <div className="flex justify-between">
+          {/* increase/decrease button with quantity */}
+          <div className="flex justify-between gap-2">
             <button
-              className="p-1 bg-gray-300 rounded cursor-pointer hover:bg-gray-400"
+              className="cursor-pointer hover:text-primary"
               onClick={() => decrement(item.code)}
             >
-              <FaMinus />
+              <FiMinusCircle size={20} />
             </button>
             <p>{item.quantity}</p>
             <button
-              className="p-1 bg-gray-300 rounded cursor-pointer hover:bg-gray-400"
+              className="cursor-pointer hover:text-primary"
               onClick={() => increment(item.code)}
             >
-              <FaPlus />
+              <FiPlusCircle size={20} />
             </button>
           </div>
-
-          <button
-            className="p-1 bg-gray-300 rounded cursor-pointer hover:bg-gray-400"
-            onClick={() => removeFromCart(item.code)}
-          >
-            <RiDeleteBin5Fill />
-          </button>
+          {/* subtotal */}
+          <div className="flex justify-between text-primary font-bold">
+            {item.price} x {item.quantity} = {item.price * item.quantity}
+          </div>
         </div>
+        <div></div>
       </div>
+      {/* delete button */}
+      <button
+        onClick={() => removeFromCart(item.code)}
+        className="bg-gray-300 hover:bg-primary p-1 rounded-2xl"
+      >
+        <RiDeleteBin5Fill size={20} />
+      </button>
     </div>
   );
 }

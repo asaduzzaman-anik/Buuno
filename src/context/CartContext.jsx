@@ -27,8 +27,8 @@ export default function CartProvider({ children }) {
   }, [cart]);
 
   const addToCart = (product) => {
-    console.log(product);
-    
+    // console.log(product);
+
     setCart((prev) => {
       const exists = prev.find((item) => item.code === product.code);
 
