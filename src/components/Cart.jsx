@@ -3,6 +3,7 @@ import { CartContext } from "../context/CartContext";
 import CartItem from "./CartItem";
 import { Link } from "react-router-dom";
 import { MdClose } from "react-icons/md";
+import { FaBangladeshiTakaSign } from "react-icons/fa6";
 
 export default function Cart() {
   const { cart, closeCart, cartOpened } = useContext(CartContext);
@@ -12,7 +13,7 @@ export default function Cart() {
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return (
-    <div className="fixed top-0 right-0 w-full sm:w-100 h-full bg-white p-3 flex flex-col justify-between items-center">
+    <div className="fixed top-0 right-0 w-full sm:w-100 h-full bg-white shadow-2xl p-3 flex flex-col justify-between items-center">
       {/* header and items  */}
       <div className="w-full">
         {/* header */}
@@ -37,8 +38,9 @@ export default function Cart() {
           <div className="mt-6">
             <div className="text-lg font-bold mb-2 flex justify-between items-center">
               <p>Total:</p>
-              <p>
-                BDT <span className="text-primary">{total}</span>
+              <p className="flex items-center gap-2">
+                <FaBangladeshiTakaSign size={16} />
+                {total}
               </p>
             </div>
             <Link

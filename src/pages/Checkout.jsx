@@ -3,6 +3,7 @@ import { CartContext } from "../context/CartContext";
 import CartItem from "../components/CartItem";
 import { MdDeleteForever } from "react-icons/md";
 import { GiTakeMyMoney } from "react-icons/gi";
+import { FaBangladeshiTakaSign } from "react-icons/fa6";
 
 export default function Checkout() {
   const { removeFromCart } = useContext(CartContext);
@@ -54,15 +55,24 @@ export default function Checkout() {
           <div className="flex flex-col gap-2">
             <div className="bg-white rounded-lg text-lg font-medium p-2 flex justify-between">
               <p>Subtotal: </p>
-              {subTotal}
+              <p className="flex items-center gap-2">
+                <FaBangladeshiTakaSign size={16} />
+                {subTotal}
+              </p>
             </div>
             <div className="bg-white rounded-lg text-lg font-medium p-2 flex justify-between">
               <p>Delivery Charge: </p>
-              {deliveryCharge}
+              <p className="flex items-center gap-2">
+                <FaBangladeshiTakaSign size={16} />
+                {deliveryCharge}
+              </p>
             </div>
             <div className="bg-white rounded-lg text-lg font-medium p-2 flex justify-between">
               <p>Grand Total: </p>
-              {total}
+              <p className="flex items-center gap-2">
+                <FaBangladeshiTakaSign size={16} />
+                {total}
+              </p>
             </div>
           </div>
         </div>
@@ -119,7 +129,10 @@ export default function Checkout() {
           <h2 className="my-3 text-lg font-medium">Order Summary</h2>
           <div className="bg-white rounded-lg text-lg font-medium p-2 flex justify-between">
             <p>Grand Total: </p>
-            <p>{subTotal}</p>
+            <p className="flex items-center gap-2">
+              <FaBangladeshiTakaSign size={16} />
+              {total}
+            </p>
           </div>
           <button className="bg-primary/70 hover:bg-primary rounded-lg text-lg font-medium p-2">
             Place Order
