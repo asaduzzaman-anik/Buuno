@@ -13,7 +13,7 @@ export default function CartItem({ item }) {
         <img src={item.image} alt="product image" />
       </div>
       {/* info */}
-      <div className="w-60 flex flex-col justify-between text-sm">
+      <div className="w-55 flex flex-col justify-between text-sm">
         <div>
           <h2>{item.name}</h2>
         </div>
