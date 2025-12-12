@@ -4,7 +4,7 @@ import LargeScreenNav from "./LargeScreenNav";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="sticky top-0 shadow-md">
       <MobileNav />
       <LargeScreenNav />
     </div>

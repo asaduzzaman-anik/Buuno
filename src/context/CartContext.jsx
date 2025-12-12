@@ -7,10 +7,7 @@ export default function CartProvider({ children }) {
   const [cartOpened, setCartOpened] = useState(false);
 
   const closeCart = () => setCartOpened(false);
-  const openCart = () => {
-    setCartOpened(true);
-  };
-
+  const openCart = () => setCartOpened(true);
   useEffect(() => {
     const saved = localStorage.getItem("cart");
     if (saved) {
