@@ -2,8 +2,6 @@
 node_modules/
 dist/
 build/
-.env
-.env.local
 .vscode/
 .idea/
 npm-debug.log*
@@ -12,3 +10,4 @@ coverage/
 logs/
 *.log
 *.lock
+config.bat
